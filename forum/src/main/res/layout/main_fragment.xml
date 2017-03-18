@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:orientation="vertical"
+    android:paddingBottom="2dp"
+    android:paddingLeft="2dp"
+    android:paddingRight="2dp"
+    android:paddingTop="2dp"
+    android:weightSum="1.0"
+    tools:context=".GameActivity">
+
+    <TextView
+        android:id="@+id/headingTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="@string/start_text"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/soundPrev"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:src="@drawable/back" />
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <tech.kolektiv.forum.view.AnimatedCircle
+                android:id="@+id/custom_circle"
+                android:layout_width="@dimen/progressBar_dimen"
+                android:layout_height="@dimen/progressBar_dimen"
+                app:circleColor="#ff4c1f"
+                app:strokeColor="#ffffff"
+                app:strokeProgress="0"
+                app:strokeThickness="1dp" />
+
+            <TextView
+                android:id="@+id/circleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/custom_circle"
+                android:layout_alignLeft="@id/custom_circle"
+                android:layout_alignRight="@id/custom_circle"
+                android:layout_alignTop="@id/custom_circle"
+                android:layout_margin="1dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="@string/circle_text_start"
+                android:textColor="#FFFFFF"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/soundImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/custom_circle"
+                android:layout_alignLeft="@id/custom_circle"
+                android:layout_alignRight="@id/custom_circle"
+                android:layout_alignTop="@id/custom_circle"
+                android:gravity="center"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:src="@drawable/soundwavebars"
+                android:visibility="invisible" />
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/soundNext"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:src="@drawable/next" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/placePrev"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:visibility="invisible"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/bottomText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif"
+            android:gravity="center|center_horizontal"
+            android:text="@string/Koliectiv"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/placeNext"
+            android:layout_width="50dp"
+            android:visibility="invisible"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:src="@drawable/back" />
+    </LinearLayout>
+
+</LinearLayout>

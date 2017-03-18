@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "395346768653",
+    "firebase_url": "https://hidden-story.firebaseio.com",
+    "project_id": "hidden-story",
+    "storage_bucket": "hidden-story.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:395346768653:android:d1b2bfdc4ac6273a",
+        "android_client_info": {
+          "package_name": "kolektiv.tech.sdm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "395346768653-tfjvqvl4b3gorlmuvpsku708tglpjuh4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0vx2YWxIagWFxll8HrPNW6ehrEIs_e8A"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

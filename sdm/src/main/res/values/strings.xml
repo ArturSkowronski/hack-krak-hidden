@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Hidden Story SDM</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="start_text">Podążaj za instrukcjami audio</string>
+    <string name="listen_text">Podążaj za głosem</string>
+    <string name="finish_text">Podziel się z nami wrażeniami</string>
+    <string name="circle_text_start">Start</string>
+    <string name="circle_text_finish">Dzieki!</string>
+    <string name="Koliectiv">Kolektiv.tech</string>
+    <string name="kontakt_io_api_key">SwaTIMAeMFppKGYTcBkFPIalmwBuqYPR</string>
+
+    <string name="title_activity_main2">Onboarding</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_onboarding">Onboarding</string>
+
+
+    <string name="title_activity_update">Game Update</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="no_game_version">Game not on server. Sorry</string>
+    <!--<string name="no_game_version">Gra nie znajduje sie na serwerze. Przepraszamy</string>-->
+    <string name="no_check_version">We cannot check if update exists. Current version run.</string>
+    <!--<string name="no_check_version">Nie można sprawdzić aktualnej wersji gry.</string>-->
+    <!--<string name="start">ROZPOCZNIJ</string>-->
+    <string name="start">START</string>
+    <string name="new_version_exists">New app version exists, download it</string>
+    <!--<string name="new_version_exists">Istnieje nowa wersja aplikacji, pobierz ją</string>-->
+    <string name="share_on_facebook">SHARE ON FACEBOOK</string>
+    <string name="share">SHARE</string>
+    <string name="go_to_next">Go to the next point</string>
+    <!--<string name="go_to_next">Idź do następnego punktu</string>-->
+    <!--<string name="repeat_instruction">Powtórz instrukcje</string>-->
+    <string name="repeat_instruction">Repeat instruction</string>
+
+    <string name="facebook_app_id">1232117766832493</string>
+</resources>
+

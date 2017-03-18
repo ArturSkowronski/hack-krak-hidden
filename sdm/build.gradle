@@ -1,0 +1,70 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'android-apt'
+
+android {
+    signingConfigs {
+        sdm {
+        }
+    }
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+    defaultConfig {
+        applicationId "kolektiv.tech.sdm"
+        minSdkVersion 19
+        targetSdkVersion 23
+        versionCode 8
+        versionName "1.1"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'main/AndroidManifest.xml'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE-FIREBASE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude "META-INF/maven/com.squareup.okio/okio/pom.xml"
+        exclude "META-INF/maven/com.squareup.okio/okio/pom.properties"
+    }
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+
+    }
+}
+
+dependencies {
+    compile project(':hidden-game')
+    compile project(':hidden-rest-client')
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    apt 'com.jakewharton:butterknife-compiler:8.0.1'
+    apt "com.google.dagger:dagger-compiler:2.2"
+    compile 'com.google.dagger:dagger:2.2'
+    compile 'com.android.support:appcompat-v7:24.0.0-alpha1'
+    compile 'com.android.support:design:23.4.0'
+    compile 'javax.annotation:jsr250-api:1.0'
+    compile 'com.jakewharton:butterknife:8.0.1'
+    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.7.0@aar'
+    compile 'io.reactivex:rxandroid:1.2.0'
+    compile 'io.reactivex:rxjava:1.1.5'
+    compile 'com.joanzapata.iconify:android-iconify-material:2.2.2'
+    compile 'com.google.firebase:firebase-core:9.2.1'
+    compile 'com.google.firebase:firebase-messaging:9.2.1'
+    compile 'com.google.firebase:firebase-crash:9.2.1'
+    compile 'com.android.support:support-v4:23.4.0'
+    compile 'com.google.android.gms:play-services-maps:9.2.1'
+    compile 'com.facebook.android:facebook-android-sdk:4.+'
+}
+
+apply plugin: 'com.google.gms.google-services'
+
+

@@ -1,0 +1,70 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'android-apt'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "kolektiv.tech.forum"
+        minSdkVersion 21
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'main/AndroidManifest.xml'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE-FIREBASE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude  "META-INF/maven/com.squareup.okio/okio/pom.xml"
+        exclude  "META-INF/maven/com.squareup.okio/okio/pom.properties"
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+}
+
+dependencies {
+    apt 'com.jakewharton:butterknife-compiler:8.0.1'
+    apt "com.google.dagger:dagger-compiler:2.2"
+
+    compile 'com.google.dagger:dagger:2.2'
+
+    compile project(':hidden-game')
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.0.0-alpha1'
+    compile 'com.android.support:design:23.4.0'
+
+    // Needed for @Generated annotation (missing in Android API jar)
+    // No longer needed in dagger >= 2.1-SNAPSHOT (github.com/google/dagger/issues/95)
+    compile 'javax.annotation:jsr250-api:1.0'
+    compile 'com.google.dagger:dagger:2.2'
+
+    compile 'com.jakewharton:butterknife:8.0.1'
+    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.7.0@aar'
+    compile 'io.reactivex:rxandroid:1.2.0'
+    compile 'io.reactivex:rxjava:1.1.5'
+    compile 'com.joanzapata.iconify:android-iconify-material:2.2.2' // (v2.0.0)
+
+
+
+}
+

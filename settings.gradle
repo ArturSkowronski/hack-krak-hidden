@@ -1,0 +1,1 @@
+include ':forum', ':newton', ':newton-kontakt', ':newton-proximi', ':newton-location', ':hidden-game', ':sdm', ':hidden-rest-client'
